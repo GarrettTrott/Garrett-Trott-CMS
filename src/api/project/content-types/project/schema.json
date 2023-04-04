@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "githubUrl": {
+      "type": "string",
+      "required": true
+    },
+    "hostedUrl": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "ProjectSceenshot": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "techUsed": {
+      "type": "enumeration",
+      "enum": [
+        "html",
+        "javascript",
+        "css",
+        "node",
+        "next",
+        "graphql",
+        "supabase",
+        "plantescale",
+        "deno",
+        "git",
+        "github",
+        "actions",
+        "aws",
+        "lambda",
+        "s3",
+        "cloudfront",
+        "jquery",
+        "docker",
+        "astro",
+        "svelte",
+        "tailwind",
+        "hygraph",
+        "react",
+        "ansible",
+        "typescript",
+        "kubernetes",
+        "route53",
+        "raspberrypi",
+        "arduino",
+        "rancher",
+        "linux"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "FeaturedProject": {
+      "type": "boolean"
+    }
+  }
+}
