@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project"
+    "displayName": "Project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -27,56 +28,19 @@
       "type": "text"
     },
     "ProjectSceenshot": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
-    },
-    "techUsed": {
-      "type": "enumeration",
-      "enum": [
-        "html",
-        "javascript",
-        "css",
-        "node",
-        "next",
-        "graphql",
-        "supabase",
-        "plantescale",
-        "deno",
-        "git",
-        "github",
-        "actions",
-        "aws",
-        "lambda",
-        "s3",
-        "cloudfront",
-        "jquery",
-        "docker",
-        "astro",
-        "svelte",
-        "tailwind",
-        "hygraph",
-        "react",
-        "ansible",
-        "typescript",
-        "kubernetes",
-        "route53",
-        "raspberrypi",
-        "arduino",
-        "rancher",
-        "linux"
+      "required": true,
+      "allowedTypes": [
+        "images"
       ]
     },
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "admin::user"
-    },
     "FeaturedProject": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
+    },
+    "TechStack": {
+      "type": "json"
     }
   }
 }
